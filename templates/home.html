@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <style>
+        body{
+            background: url('static/img/home.jpeg') no-repeat;
+            background-position: unset;
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <body>
+        <section id="home-section">
+            <h1>Pareciera que te has perdido en el bosque</h1>
+            <p>ve al panel de navegación para ver mas paisajes</p>
+        </section>
+    </body>
+{% endblock %}

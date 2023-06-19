@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/paisajes.css' %}">
+    <section id="paisajes-section">
+        <div id="paisajes-contenedor">
+            <div id="paisaje1" class="paisaje-card">
+                <div id="img1" class="img"></div>
+                <a href="/paisajes/paisaje1">Comentar</a>
+            </div>
+            <div id="paisaje2" class="paisaje-card">
+                <div id="img2" class="img"></div>
+                <a href="/paisajes/paisaje2">Comentar</a>
+            </div>
+            <div id="paisaje3" class="paisaje-card">
+                <div id="img3" class="img"></div>
+                <a href="/paisajes/paisaje3">Comentar</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

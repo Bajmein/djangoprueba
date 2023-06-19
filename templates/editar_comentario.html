@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/editar_comentario.css' %}">
+    <section class="editar-comentarios-container">
+        <div class="comentarios-form">
+            {{ error }}
+            <form method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button>Modificar</button>
+            </form>
+            <form action="{% url 'eliminar_comentario' comentario.id %}" method="POST">
+                {% csrf_token %}
+                <button id="btn-eliminar">Eliminar</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/comentarios.css' %}">
+    <section id="comentarios-section">
+        <span id="comentario-titulo">
+            <h1>Comentarios</h1>
+        </span>
+        <div id="comentarios-container">
+            {% for comentario in comentarios %}
+                <div class="comentario">
+                    <h2>{{ comentario.titulo }}</h2>
+                    <p id="comentario">{{ comentario.comentario }}</p>
+                    <strong><p>{{ comentario.fecha }}</p></strong>
+                    <strong><p>{{ comentario.user }}</p></strong>
+                    <strong>
+                        <a href="{% url 'editar_comentario' comentario.id %}">Modificar o eliminar</a>
+                    </strong>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

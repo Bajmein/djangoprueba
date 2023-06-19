@@ -1,0 +1,69 @@
+body{
+    background: url("https://images.pexels.com/photos/1276518/pexels-photo-1276518.jpeg");
+    background-position: unset;
+    background-size: cover;
+}
+#comentario-titulo{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 1.8rem;
+    color: white;
+}
+#comentarios-section{
+    height: 95.2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#comentarios-container{
+    width: 94%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.comentario{
+    border-radius: 5px;
+    border: 1px solid rgba(1, 1, 1, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 30vh;
+    margin: .2vw;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+.comentario > * {
+    margin: .2vw;
+}
+.comentario h2{
+    margin-bottom: 1vh;
+}
+.comentario a{
+    text-decoration: None;
+    color: #3068cc;
+    font-size: 1.2rem;
+    transition: .5s;
+}
+.comentario a:hover{
+    color: #730d0d;
+}
+#comentario{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    align-items: center;
+    margin-bottom: 3vh;
+    width: 90%;
+    height: 10vh;
+    border: 1px solid rgba(1, 1, 1, .2);
+    border-radius: 5px;
+    background: rgba(1, 1, 1, .2);
+}

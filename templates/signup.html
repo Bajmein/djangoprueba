@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+    <section id="sign-container">
+        <div id="form-container">
+            <form action="/signup/" method="POST" id="sign-form">
+                <h1>Registro</h1>
+                {{ error }}
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Registrarse</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+

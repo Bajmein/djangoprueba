@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/paisaje.css' %}">
+    <style>
+        body{
+            background: url("https://images.pexels.com/photos/1488401/pexels-photo-1488401.jpeg");
+            background-position: unset;
+            background-size: cover;
+        }
+    </style>
+    <section class="paisaje-container">
+        <div class="paisaje-form">
+            <form action="" method="POST">
+                {{ error }}
+                {% csrf_token %}
+                {{ form }}
+                <button>Enviar</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
